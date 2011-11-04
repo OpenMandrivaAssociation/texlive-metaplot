@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /graphics/metaplot
+# catalog-date 2006-11-09 21:17:58 +0100
+# catalog-license lppl
+# catalog-version 0.91
 Name:		texlive-metaplot
 Version:	0.91
 Release:	1
@@ -63,6 +69,7 @@ most welcome!.
 %doc %{_texmfdistdir}/doc/latex/metaplot/examples/metacontour.h
 %doc %{_texmfdistdir}/doc/latex/metaplot/examples/metacontour_main.cc
 %doc %{_texmfdistdir}/doc/latex/metaplot/metaplot_preprint.pdf
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -73,3 +80,5 @@ most welcome!.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar metapost doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
