@@ -6,7 +6,7 @@
 # catalog-version 0.91
 Name:		texlive-metaplot
 Version:	0.91
-Release:	6
+Release:	7
 Summary:	Plot-manipulation macros for use in Metapost
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/metaplot
