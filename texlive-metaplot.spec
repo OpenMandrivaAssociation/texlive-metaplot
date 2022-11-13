@@ -1,18 +1,12 @@
-# revision 15878
-# category Package
-# catalog-ctan /graphics/metaplot
-# catalog-date 2006-11-09 21:17:58 +0100
-# catalog-license lppl
-# catalog-version 0.91
 Name:		texlive-metaplot
-Version:	0.91
-Release:	11
+Version:	15878
+Release:	1
 Summary:	Plot-manipulation macros for use in Metapost
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/metaplot
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/metaplot.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/metaplot.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/metaplot.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/metaplot.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -34,12 +28,12 @@ potentially in flux. Bug reports and other suggestions would be
 most welcome!.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -63,24 +57,10 @@ most welcome!.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar metapost doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.91-2
-+ Revision: 753859
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.91-1
-+ Revision: 718998
-- texlive-metaplot
-- texlive-metaplot
-- texlive-metaplot
-- texlive-metaplot
-
