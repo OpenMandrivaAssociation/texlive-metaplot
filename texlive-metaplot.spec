@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	Plot-manipulation macros for use in Metapost
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/graphics/metaplot
+URL:		https://www.ctan.org/tex-archive/graphics/metaplot
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/metaplot.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/metaplot.doc.r%{version}.tar.xz
